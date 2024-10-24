@@ -40,7 +40,7 @@ jobs:
         run: python3 script/archive.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
       - uses: actions/upload-artifact@v4
         with:
-          name: Skia-${{ env.version }}-windows-${{ matrix.build_type }}-x64.zip
+          name: MySkia-${{ env.version }}-windows-${{ matrix.build_type }}-x64.zip
           path: '*.zip'
       - shell: bash
         run: python3 script/release.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
