@@ -38,7 +38,7 @@ jobs:
         run: python3 script/build.py --build-type ${{ matrix.build_type }}
       - shell: bash
         run: python3 script/archive.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: Skia-${{ env.version }}-windows-${{ matrix.build_type }}-x64.zip
           path: '*.zip'
