@@ -13,8 +13,8 @@ def main():
 
   zip = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '.zip'
   if not os.path.exists(zip):
+    os.remove(zip)
     print('Can\'t find "' + zip + '"')
-    return 1
 
   headers = common.github_headers()
 
